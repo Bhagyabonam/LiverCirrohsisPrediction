@@ -74,11 +74,16 @@
         }
 
         .result {
-            margin-top: 20px;
-            text-align: center;
+            font-size: 1.5em;
             font-weight: bold;
-            color: #16a085;
-            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+            padding: 16px 24px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(33,150,243,0.15);
+            letter-spacing: 1px;
         }
 
         @media screen and (max-width: 600px) {
@@ -152,11 +157,11 @@
         </div>
         <div>
             <label>Duration of alcohol consumption (years)</label>
-            <input type="number" step="any" name="Duration of alcohol consumption(years)" required value="{{ form_values.get('AlcoholDuration', '') }}">
+            <input type="number" step="any" name="Duration of alcohol consumption(years)" required value="{{ form_values['Duration of alcohol consumption(years)'] if form_values else '' }}">
         </div>
         <div>
             <label>Quantity of alcohol consumption (quarters/day)</label>
-            <input type="number" step="any" name="Quantity of alcohol consumption (quarters/day)" required value="{{ form_values.get('AlcoholQuantity', '') }}">
+            <input type="number" step="any" name="Quantity of alcohol consumption (quarters/day)" required value="{{ form_values['Quantity of alcohol consumption (quarters/day)'] if form_values else '' }}">
         </div>
         <div>
             <label>Diabetes</label>
@@ -184,11 +189,11 @@
         </div>
         <div>
             <label>Hemoglobin</label>
-            <input type="number" step="any" name="Hemoglobin  (g/dl)" required value="{{ form_values.get('Hemoglobin', '') }}">
+            <input type="number" step="any" name="Hemoglobin  (g/dl)" required value="{{ form_values['Hemoglobin  (g/dl)'] if form_values else '' }}">
         </div>
         <div>
             <label>SGPT/ALT (U/L)</label>
-            <input type="number" step="any" name="SGPT/ALT (U/L)" required value="{{ form_values.get('SGPT', '') }}">
+            <input type="number" step="any" name="SGPT/ALT (U/L)" required value="{{ form_values['SGPT/ALT (U/L)'] if form_values else '' }}">
         </div>
     </div>
 
