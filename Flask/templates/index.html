@@ -14,6 +14,23 @@
             height: 100vh;
         }
 
+        .main-title {
+    font-size: 2.7em;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    color: #6db794;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
         .overlay {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -140,7 +157,7 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <h2>Liver Cirrhosis Risk Predictor</h2>
+    <div class="main-title">Liver Cirrhosis Risk Predictor</div>
     <form action="/predict" method="POST" style="max-width:500px; margin:40px auto; background: rgba(255,255,255,0.25); padding: 30px 30px; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
     <div class="form-grid">
         <div>
